@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0 0 20px;
+}
+
+table td {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
+.message-bar {
+  display: none;
+}
+
+.score {
+  font-size: 1.3rem;
+}
+
+form input[type='text'] {
+  width: 20%;
+}
+
+.words-container {
+  margin-top: 20px;
+}

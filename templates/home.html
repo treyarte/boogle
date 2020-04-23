@@ -1,0 +1,38 @@
+{%extends "base.html"%} {%block content%}
+<h1>Boogle</h1>
+<h3 class="countdown">Seconds Left <span class="play-time"></span></h3>
+<table>
+  {%for cell in board%}
+  <tr>
+    {%for c in cell%}
+    <td>{{c}}</td>
+    {%endfor%}
+  </tr>
+  {%endfor%}
+</table>
+<div class="score-container">
+  <p class="high-score score">
+    High Score:
+    <span class="high-score-value">{{session.get("highscore", 0)}}</span>
+  </p>
+  <p class="number-plays score">
+    Number of plays:
+    <span>{{session.get("n_plays", 0)}}</span>
+  </p>
+
+  <p class="score">Score: <span class="score-value">0</span></p>
+</div>
+
+<form id="boogle-form" action="/check-word">
+  <input class="form-control" autofocus type="text" name="word-input" />
+</form>
+
+<div class="words-container">
+  <div>
+    <h3>
+      Words
+    </h3>
+  </div>
+  <ul class="word-list"></ul>
+</div>
+{%endblock%}
